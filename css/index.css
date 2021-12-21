@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/**************/
+
+
+/* 0. Variáveis
+/* 1. Gerais
+/* 2. Component
+/**************/
+
+
+/**************/
+
+
+/* 0. Variáveis
+
+/**************/
+
+:root {
+    --font--text: 'Red Hat Display', sans-serif;
+    --font--size: 1rem;
+    --pale-blue: hsl(225, 100%, 94%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desatured-blue: hsl(224, 23%, 55%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --hoverable-link: rgb(128, 69, 184);
+    --button-text-color: rgb(255, 255, 255);
+    --component-background-color: rgb(253, 253, 253);
+}
+
+
+/**************/
+
+
+/* 1. Gerais
+
+/**************/
+
+body {
+    font-family: var(--font--text);
+    font-size: var(--font--size);
+}
+
+
+/**************/
+
+
+/* 2. Component
+
+/**************/
+
+.background-cover {
+    background: url(/images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+    .background-cover {
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+}
+
+.component {
+    background-color: var(--component-background-color);
+    box-shadow: 0px 0px 10px 1px #2f33337d;
+    width: 400px;
+    height: 570px;
+    margin: 20vh auto;
+    border-radius: 20px;
+}
+
+.component__head img {
+    border-radius: 20px 20px 0 0;
+}
+
+.component__body {
+    text-align: center;
+    padding: 0 25px;
+}
+
+.component__body h2 {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.component__body p {
+    color: var(--desatured-blue);
+}
+
+.component__plan {
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    padding: 0 20px;
+    text-align: left;
+    position: relative;
+}
+
+.component__plan img,
+.component__plan h4 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.component__plan img {
+    margin-right: 1rem;
+}
+
+.component__plan h4 {
+    font-weight: 700;
+}
+
+.component__currently-plan span {
+    color: var(--desatured-blue);
+}
+
+.component__plan a {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    font-weight: 900;
+    font-size: .90rem;
+}
+
+.component__plan a:hover {
+    text-decoration: none;
+    color: var(--hoverable-link);
+}
+
+.component__body button {
+    background-color: var(--bright-blue);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px #636666d4;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 16px 0;
+    margin-top: 1.6rem;
+    width: 98%;
+    cursor: pointer;
+}
+
+.component__body button:hover {
+    background-color: var(--hoverable-link);
+}
+
+.component__body .component__cancel>a {
+    text-decoration: none;
+    color: var(--desatured-blue);
+}
+
+.component__body .component__cancel>a:hover {
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+
+/**************/
