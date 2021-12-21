@@ -63,16 +63,10 @@ body {
     background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 360px) and (max-width: 600px) {
-    .background-cover {
-        background-image: url(/images/pattern-background-mobile.svg);
-    }
-}
-
 .component {
     background-color: var(--component-background-color);
     box-shadow: 0px 0px 10px 1px #2f33337d;
-    width: 90vw;
+    width: 400px;
     height: 570px;
     margin: 20vh auto;
     border-radius: 20px;
@@ -163,5 +157,13 @@ body {
     font-weight: 700;
 }
 
+@media screen and (min-width: 360px) and (max-width: 600px) {
+    .background-cover {
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+    .component {
+        width: 90vw;
+    }
+}
 
 /**************/
